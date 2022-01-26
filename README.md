@@ -1,5 +1,5 @@
 # Starship-Prompt
-My Starship Config
+
 The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 
 <img src="Preview.png" alt="Preview" />
