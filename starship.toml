@@ -1,97 +1,52 @@
 format = """
-[╭─](bold white)$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
-[╰─❯](bold white)"""
- 
-right_format="""$cmd_duration"""
-
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-
-[cmd_duration]
-min_time = 0
-show_milliseconds = true
-format='[$duration]($style)'
-style="bold yellow"
-
-[java]
-symbol = "☕"
-style="red"
-format="via [${symbol} (${version} )](208)($style)"
-
-[lua]
-style="#7FFFD4"
-
-[cmake]
-symbol = "🌕"
-format="via [${symbol} (${version} )]($style)"
-
-[kubernetes]
-format = 'context: [⎈ $context \($namespace\)](bold cyan) '
-disabled = false
-# [kubernetes.context_aliases]
-# "dev.local.cluster.k8s" = "dev"
-
-[memory_usage]
-format = "with$symbol [${ram} ${ram_pct}( | ${swap} ${swap_pct})]($style) "
-disabled = false
-threshold = -1
-symbol = " "
-style = "bold dimmed green"
-
-[gcloud]
-style = "blue"
-format = '[$symbol$account(\($project\))]($style) '
-symbol = "️G⅁:☁️"
-[gcloud.region_aliases]
-us-central1 = "uc1"
-asia-northeast1 = "an1"
+[ ](bold white)$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
+[ ❯ ](bold green)"""
 
 [aws]
-format = '[$symbol$profile(\($region\))]($style) '
-style = "bold yellow"
-symbol = "∀⍵₷☁️☁️ "
-[aws.region_aliases]
-ap-southeast-2 = "au"
-us-east-1 = "va"
+symbol = "  "
 
-[package]
-format = "on [🎁 $version](208 bold) "
+[buf]
+symbol = " "
 
-[docker_context]
-format = "docker: [🐋 $context](blue bold)"
-disabled = false
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
 
 [directory]
+read_only = " "
 truncation_length = 7
 truncation_symbol = "…/"
+
+[hostname]
+ssh_only = false
+format = '[$hostname]($style) '
+style = "blue bold"
+trim_at = "."
+disabled = false
 
 [username]
 style_user = "blue bold"
 style_root = "red bold"
-format = "user: [$user]($style) "
+format = "[$user]($style) "
 disabled = false
 show_always = true
 
-[time]
-disabled = false
-format = '[\[ $time \]]($style) '
+[docker_context]
+symbol = " "
 
-[hostname]
-ssh_only = false
-format = '[$hostname](red) '
-trim_at = "."
-disabled = false
+[elixir]
+symbol = " "
 
-[status]
-style = "red"
-symbol = "💥 "
-format = '[\[$symbol$status\]]($style) '
-disabled = false
+[elm]
+symbol = " "
 
 [git_branch]
-always_show_remote = true
-style = "bold blue"
+symbol = " "
 
 [git_status]
 ahead = "⇡🏎💨${count}"
@@ -105,22 +60,59 @@ staged = '[++\($count\)](green)'
 renamed = "👅"
 deleted ="🗑 "
 
-[rust]
-format ="via [${symbol}(${version} )](208)($style)"
-
 [golang]
-format = "go: [🏎💨 $version](bold cyan) "
+symbol = " "
 
-[helm]
-format = "helm: [⎈ $version](bold white) "
+[haskell]
+symbol = " "
 
-[jobs]
-symbol = "+ "
-threshold = 4
-format = "background [$symbol$number]($style) "
+[hg_branch]
+symbol = " "
 
-[terraform]
-format = "[🏎💨 $version$workspace]($style) "
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[meson]
+symbol = "喝 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
 
 [battery]
 full_symbol = "🔋"
