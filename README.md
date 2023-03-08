@@ -2,7 +2,7 @@
 
 The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 
-<img src="Screenshot.png" alt="Preview" />
+<img src="Preview1.png" alt="Preview" />
 
 Fast: it's fast – really really fast! 🚀
 
